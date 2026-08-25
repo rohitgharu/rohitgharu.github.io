@@ -1,117 +1,725 @@
-```html
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Web Design Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Rohit | Modern Web Designer</title>
 
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;background:#0b1020;color:#fff}
-.wrap{max-width:1050px;margin:auto;padding:0 24px}
-nav{padding:25px 0;display:flex;justify-content:space-between}
-.brand{font-weight:800;font-size:22px}
-.hero{padding:80px 0}
-.hero h1{font-size:56px;max-width:800px;margin:0 0 20px}
-.hero p{font-size:19px;color:#b9c2d8;line-height:1.7;max-width:700px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-.card{background:#131b31;border:1px solid #263250;border-radius:16px;padding:28px}
-.tag{color:#8ea5ff;font-size:13px;font-weight:700}
-.card a{color:#fff;text-decoration:none}
-.btn{display:inline-block;margin-top:15px;padding:14px 22px;border-radius:8px;background:#fff;color:#111;text-decoration:none;font-weight:700}
-.btn-dark{background:#1dbf73;color:#fff}
-section{padding:55px 0}
-h2{font-size:34px}
-.muted{color:#b9c2d8}
-.contact-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
-@media(max-width:750px){
-.hero h1{font-size:42px}
-.grid{grid-template-columns:1fr}
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#080b12;
+color:#fff;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:min(1120px,92%);
+margin:auto;
+}
+
+/* NAVBAR */
+
+nav{
+padding:24px 0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #1d2433;
+}
+
+.logo{
+font-size:25px;
+font-weight:900;
+letter-spacing:2px;
+}
+
+.logo span{
+color:#1dbf73;
+}
+
+.nav-right{
+color:#9da8bb;
+font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+padding:95px 0 80px;
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:60px;
+align-items:center;
+}
+
+.badge{
+display:inline-block;
+padding:8px 14px;
+border:1px solid #263145;
+border-radius:30px;
+color:#7ee2ae;
+font-size:13px;
+margin-bottom:22px;
+background:#0d131d;
+}
+
+.hero h1{
+font-size:64px;
+line-height:1.05;
+letter-spacing:-2px;
+margin-bottom:25px;
+}
+
+.hero h1 span{
+color:#1dbf73;
+}
+
+.hero p{
+color:#aeb8ca;
+font-size:18px;
+max-width:650px;
+margin-bottom:30px;
+}
+
+.buttons{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:15px 24px;
+border-radius:10px;
+font-weight:700;
+transition:.2s;
+}
+
+.btn-green{
+background:#1dbf73;
+color:#06100b;
+}
+
+.btn-green:hover{
+transform:translateY(-3px);
+}
+
+.btn-outline{
+border:1px solid #354158;
+color:#fff;
+}
+
+.btn-outline:hover{
+background:#151c29;
+}
+
+/* HERO CARD */
+
+.preview{
+background:#111722;
+border:1px solid #283246;
+border-radius:22px;
+padding:14px;
+box-shadow:0 25px 70px rgba(0,0,0,.35);
+}
+
+.preview-top{
+display:flex;
+gap:6px;
+padding:8px 4px 13px;
+}
+
+.dot{
+width:9px;
+height:9px;
+border-radius:50%;
+background:#3b4557;
+}
+
+.preview-img{
+height:330px;
+border-radius:14px;
+overflow:hidden;
+position:relative;
+background:
+linear-gradient(135deg,#182235,#101722);
+}
+
+.preview-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.preview-label{
+position:absolute;
+left:20px;
+bottom:20px;
+background:rgba(5,8,13,.85);
+padding:14px 18px;
+border-radius:12px;
+border:1px solid #344057;
+}
+
+.preview-label small{
+color:#91a0b7;
+}
+
+.preview-label strong{
+display:block;
+font-size:20px;
+margin-top:3px;
+}
+
+/* SECTIONS */
+
+section{
+padding:85px 0;
+}
+
+.section-head{
+margin-bottom:35px;
+}
+
+.section-head small{
+color:#1dbf73;
+font-weight:800;
+letter-spacing:2px;
+}
+
+.section-head h2{
+font-size:42px;
+margin-top:8px;
+}
+
+.section-head p{
+color:#98a4b9;
+max-width:650px;
+margin-top:10px;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.project{
+background:#101621;
+border:1px solid #263145;
+border-radius:18px;
+overflow:hidden;
+transition:.25s;
+}
+
+.project:hover{
+transform:translateY(-7px);
+border-color:#1dbf73;
+}
+
+.project-img{
+height:250px;
+overflow:hidden;
+}
+
+.project-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.3s;
+}
+
+.project:hover img{
+transform:scale(1.05);
+}
+
+.project-content{
+padding:25px;
+}
+
+.project-tag{
+color:#1dbf73;
+font-size:12px;
+font-weight:800;
+letter-spacing:1px;
+}
+
+.project h3{
+font-size:25px;
+margin:8px 0;
+}
+
+.project p{
+color:#9da8bb;
+margin-bottom:18px;
+}
+
+.project-link{
+font-weight:700;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.service{
+background:#101621;
+border:1px solid #263145;
+border-radius:16px;
+padding:28px;
+}
+
+.service-number{
+color:#1dbf73;
+font-size:13px;
+font-weight:800;
+}
+
+.service h3{
+margin:12px 0 8px;
+font-size:21px;
+}
+
+.service p{
+color:#98a4b9;
+}
+
+/* PROCESS */
+
+.process{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.step{
+padding:28px;
+border-left:2px solid #1dbf73;
+background:#0e141e;
+}
+
+.step h3{
+margin-bottom:8px;
+}
+
+.step p{
+color:#98a4b9;
+}
+
+/* CTA */
+
+.cta{
+background:linear-gradient(135deg,#101a18,#101621);
+border:1px solid #263145;
+border-radius:24px;
+padding:55px;
+text-align:center;
+}
+
+.cta h2{
+font-size:42px;
+margin-bottom:12px;
+}
+
+.cta p{
+color:#9da8bb;
+margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+padding:35px 0;
+border-top:1px solid #1d2433;
+color:#78859a;
+font-size:14px;
+text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+.hero{
+grid-template-columns:1fr;
+padding-top:65px;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.projects{
+grid-template-columns:1fr;
+}
+
+.services,
+.process{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:500px){
+
+.hero h1{
+font-size:40px;
+}
+
+.section-head h2,
+.cta h2{
+font-size:32px;
+}
+
+.cta{
+padding:35px 20px;
+}
+
+.preview-img{
+height:260px;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrap">
+<div class="container">
 
 <nav>
-<div class="brand">WEB DESIGN STUDIO</div>
-<div>HTML · CSS · JS</div>
-</nav>
 
-<div class="hero">
-<h1>Modern websites for growing businesses.</h1>
-
-<p>
-I create clean, responsive and professional websites for local businesses and entrepreneurs.
-</p>
-
-<a class="btn" href="#work">View Demo Projects</a>
+<div class="logo">
+<span>R</span>OHIT
 </div>
 
-<section id="work">
+<div class="nav-right">
+WEB DESIGN · HTML · CSS · JS
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<div class="badge">
+AVAILABLE FOR NEW PROJECTS
+</div>
+
+<h1>
+Websites that make your business
+<span>look better.</span>
+</h1>
+
+<p>
+I design clean, modern and mobile-friendly websites for
+small businesses, shops, cafés, restaurants, gyms and local brands.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-green" href="#projects">
+View My Work
+</a>
+
+<a class="btn btn-outline"
+href="https://www.fiverr.com/rohitgharu52/design-a-modern-responsive-website-for-your-business"
+target="_blank">
+Hire Me on Fiverr
+</a>
+
+</div>
+
+</div>
+
+
+<div class="preview">
+
+<div class="preview-top">
+<div class="dot"></div>
+<div class="dot"></div>
+<div class="dot"></div>
+</div>
+
+<div class="preview-img">
+
+<img
+src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=80"
+alt="Modern business website">
+
+<div class="preview-label">
+<small>MODERN BUSINESS WEBSITE</small>
+<strong>Built for your brand.</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<div class="section-head">
+
+<small>SELECTED WORK</small>
 
 <h2>Demo Projects</h2>
 
-<div class="grid">
-
-<div class="card">
-<div class="tag">RESTAURANT / CAFE</div>
-<h3>Urban Spoon Cafe</h3>
-<p class="muted">
-Responsive café landing page with menu, about and contact sections.
+<p>
+A few website concepts created to demonstrate different
+business styles and layouts.
 </p>
-<a href="restaurant-demo.html">Open Demo →</a>
+
 </div>
 
-<div class="card">
-<div class="tag">FASHION / RETAIL</div>
+
+<div class="projects">
+
+
+<!-- FASHION -->
+
+<div class="project">
+
+<div class="project-img">
+
+<img
+src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1200&q=80"
+alt="Fashion website">
+
+</div>
+
+<div class="project-content">
+
+<div class="project-tag">
+FASHION · RETAIL
+</div>
+
 <h3>Rangoli Fashion</h3>
-<p class="muted">
-Modern storefront concept for a clothing business with featured products and offers.
+
+<p>
+A stylish storefront concept for a modern clothing business,
+designed to highlight products and offers.
 </p>
-<a href="fashion-demo.html">Open Demo →</a>
+
+<a class="project-link"
+href="fashion-demo.html">
+View Fashion Demo →
+</a>
+
 </div>
 
 </div>
+
+
+<!-- CAFE -->
+
+<div class="project">
+
+<div class="project-img">
+
+<img
+src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80"
+alt="Cafe website">
+
+</div>
+
+<div class="project-content">
+
+<div class="project-tag">
+CAFE · RESTAURANT
+</div>
+
+<h3>Brew Haven Cafe</h3>
+
+<p>
+A warm and modern café website concept featuring
+menu items, offers and a strong visual identity.
+</p>
+
+<a class="project-link"
+href="restaurant-demo.html">
+View Cafe Demo →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
+
+<!-- SERVICES -->
+
 <section>
+
+<div class="section-head">
+
+<small>WHAT I DO</small>
 
 <h2>Services</h2>
 
-<p class="muted">
-Business websites · Landing pages · Responsive design · HTML/CSS/JavaScript · Basic integrations
+</div>
+
+
+<div class="services">
+
+<div class="service">
+
+<div class="service-number">01</div>
+
+<h3>Business Websites</h3>
+
+<p>
+Professional websites for shops, cafés, salons,
+gyms and local businesses.
 </p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">02</div>
+
+<h3>Landing Pages</h3>
+
+<p>
+Modern landing pages designed to present your
+business and convert visitors.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-number">03</div>
+
+<h3>Responsive Design</h3>
+
+<p>
+Websites that look clean and professional on
+mobile, tablet and desktop.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
+
+<!-- PROCESS -->
+
 <section>
 
-<h2>Let's work together</h2>
+<div class="section-head">
 
-<p class="muted">
-Need a modern website for your business? Contact me or order through Fiverr.
+<small>HOW IT WORKS</small>
+
+<h2>Simple process. Clear results.</h2>
+
+</div>
+
+
+<div class="process">
+
+<div class="step">
+
+<h3>01. Discuss</h3>
+
+<p>
+We discuss your business, requirements and
+the type of website you need.
 </p>
 
-<div class="contact-buttons">
+</div>
 
-<a class="btn btn-dark"
+
+<div class="step">
+
+<h3>02. Design</h3>
+
+<p>
+I create a clean and modern layout based
+on your business style.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<h3>03. Deliver</h3>
+
+<p>
+Your responsive website is completed,
+tested and ready to use.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section>
+
+<div class="cta">
+
+<h2>
+Have a business that needs a website?
+</h2>
+
+<p>
+Let's create something modern, professional and memorable.
+</p>
+
+<div class="buttons" style="justify-content:center;">
+
+<a class="btn btn-green"
 href="https://www.fiverr.com/rohitgharu52/design-a-modern-responsive-website-for-your-business"
 target="_blank">
-Order on Fiverr
+Start a Project
 </a>
 
-<a class="btn"
-href="https://www.fiverr.com/rohitgharu52"
-target="_blank">
-View Fiverr Profile
-</a>
-
-<a class="btn"
+<a class="btn btn-outline"
 href="https://wa.me/919877951955?text=Hi%20Rohit%2C%20I%20need%20a%20website%20for%20my%20business."
 target="_blank">
 WhatsApp Me
@@ -119,10 +727,18 @@ WhatsApp Me
 
 </div>
 
+</div>
+
 </section>
+
+
+<footer>
+
+© 2026 Rohit · Web Designer · HTML · CSS · JavaScript
+
+</footer>
 
 </div>
 
 </body>
 </html>
-```
