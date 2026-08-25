@@ -1,1 +1,442 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Rangoli Fashion</title><style>*{box-sizing:border-box}body{margin:0;font-family:Arial;color:#171717;background:#fafafa}header{padding:20px 7%;display:flex;justify-content:space-between;background:#fff;border-bottom:1px solid #eee}.logo{font-weight:900;letter-spacing:1px}.nav a{margin-left:22px;color:#222;text-decoration:none}.hero{padding:80px 7%;background:#ece8e2;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px}.hero h1{font-size:56px;margin:0 0 15px}.hero p{font-size:18px;line-height:1.7}.btn{display:inline-block;background:#111;color:#fff;padding:14px 24px;border-radius:5px;text-decoration:none}.visual{height:380px;border-radius:18px;background:#756b60;display:flex;align-items:center;justify-content:center;color:white;font-size:28px;font-weight:700}section{padding:65px 7%}h2{text-align:center;font-size:34px}.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.product{background:white;border-radius:12px;overflow:hidden;box-shadow:0 8px 25px #0001}.pic{height:260px;background:#ddd;display:flex;align-items:center;justify-content:center;font-size:55px}.info{padding:20px}.price{font-weight:800;margin-top:10px}.offer{text-align:center;background:#111;color:#fff}.contact{text-align:center}footer{text-align:center;padding:22px;background:#f0f0f0;color:#555}@media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:42px}.products{grid-template-columns:1fr}.nav{display:none}}</style></head><body><header><div class='logo'>RANGOLI FASHION</div><nav class='nav'><a href='#collection'>Collection</a><a href='#about'>About</a><a href='#contact'>Contact</a></nav></header><section class='hero'><div><p>NEW SEASON · 2026</p><h1>Style made for every day.</h1><p>Modern fashion for men, women and kids. A clean storefront concept designed to showcase collections and offers.</p><a class='btn' href='#collection'>Explore Collection</a></div><div class='visual'>FASHION LOOKBOOK</div></section><section id='collection'><h2>Featured Collection</h2><div class='products'><div class='product'><div class='pic'>👔</div><div class='info'><h3>Men's Formal Shirt</h3><p>Classic fit · Premium finish</p><div class='price'>₹999</div></div></div><div class='product'><div class='pic'>👗</div><div class='info'><h3>Women's Collection</h3><p>Elegant seasonal styles</p><div class='price'>From ₹1,499</div></div></div><div class='product'><div class='pic'>🧥</div><div class='info'><h3>Kids Winter Edit</h3><p>Comfortable everyday looks</p><div class='price'>From ₹699</div></div></div></div></section><section id='about'><h2>About the Store</h2><p style='max-width:760px;margin:auto;text-align:center;line-height:1.8'>Demo storefront for a local fashion business. Replace product names, prices, photos, address and social links with the client's real information.</p></section><section class='offer'><h2>Special Offer</h2><p>Seasonal styles with selected items up to 50% off.</p><a class='btn' href='#contact'>Shop / Enquire</a></section><section id='contact' class='contact'><h2>Visit Us</h2><p>Kabari Bazar · Ferozepur Cantt · Punjab</p><p>WhatsApp / Phone: +91 XXXXX XXXXX</p></section><footer>© 2026 Rangoli Fashion · Demo Website</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rangoli Fashion | Modern Clothing Store</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#faf8f5;
+color:#171717;
+line-height:1.6;
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+
+/* NAV */
+nav{
+height:80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #e8e2dc;
+}
+.logo{
+font-size:24px;
+font-weight:900;
+letter-spacing:2px;
+}
+.logo span{color:#b76e79}
+.navlinks{
+display:flex;
+gap:25px;
+font-size:14px;
+font-weight:700;
+}
+.navlinks a:hover{color:#b76e79}
+
+/* HERO */
+.hero{
+min-height:620px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+.hero-text small{
+color:#b76e79;
+font-weight:800;
+letter-spacing:2px;
+}
+.hero h1{
+font-size:64px;
+line-height:1.02;
+letter-spacing:-2px;
+margin:15px 0 20px;
+}
+.hero p{
+color:#666;
+font-size:18px;
+max-width:520px;
+margin-bottom:28px;
+}
+.btn{
+display:inline-block;
+padding:15px 25px;
+border-radius:5px;
+font-weight:800;
+}
+.btn-dark{
+background:#171717;
+color:white;
+}
+.btn-pink{
+background:#b76e79;
+color:white;
+}
+.hero-img{
+height:520px;
+border-radius:5px;
+overflow:hidden;
+}
+.hero-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* SECTION */
+section{padding:85px 0}
+.section-title{text-align:center;margin-bottom:40px}
+.section-title small{
+color:#b76e79;
+font-weight:800;
+letter-spacing:2px;
+}
+.section-title h2{
+font-size:40px;
+margin-top:8px;
+}
+
+/* PRODUCTS */
+.products{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+.product{
+background:white;
+border:1px solid #e9e3dd;
+overflow:hidden;
+transition:.25s;
+}
+.product:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+.product-img{
+height:360px;
+overflow:hidden;
+}
+.product-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.3s;
+}
+.product:hover img{transform:scale(1.04)}
+.product-info{padding:22px}
+.product-info small{
+color:#b76e79;
+font-weight:800;
+}
+.product-info h3{
+font-size:21px;
+margin:6px 0;
+}
+.price{
+font-weight:900;
+font-size:18px;
+}
+
+/* LOOKBOOK */
+.lookbook{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+align-items:center;
+}
+.look-img{
+height:500px;
+overflow:hidden;
+}
+.look-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+.look-text{
+padding:30px;
+}
+.look-text small{
+color:#b76e79;
+font-weight:800;
+letter-spacing:2px;
+}
+.look-text h2{
+font-size:45px;
+line-height:1.1;
+margin:15px 0;
+}
+.look-text p{
+color:#666;
+margin-bottom:25px;
+}
+
+/* OFFER */
+.offer{
+background:#171717;
+color:white;
+padding:65px 30px;
+text-align:center;
+}
+.offer small{
+color:#d99ca5;
+font-weight:800;
+letter-spacing:2px;
+}
+.offer h2{
+font-size:45px;
+margin:10px 0;
+}
+.offer p{
+color:#aaa;
+margin-bottom:25px;
+}
+
+/* FOOTER */
+footer{
+border-top:1px solid #e5dfd9;
+padding:30px 0;
+text-align:center;
+color:#777;
+font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+.hero{
+grid-template-columns:1fr;
+padding:55px 0;
+}
+.hero h1{font-size:46px}
+.hero-img{height:420px}
+.products{grid-template-columns:1fr}
+.lookbook{grid-template-columns:1fr}
+.look-img{height:400px}
+.navlinks{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+<div class="logo">
+<span>R</span>ANGOLI FASHION
+</div>
+
+<div class="navlinks">
+<a href="#new">New Arrivals</a>
+<a href="#collection">Collection</a>
+<a href="#offer">Offers</a>
+</div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<small>NEW SEASON · 2026</small>
+
+<h1>
+Style that feels
+different.
+</h1>
+
+<p>
+Discover modern fashion for men, women and kids.
+Clean styles, everyday comfort and looks made to stand out.
+</p>
+
+<a class="btn btn-dark" href="#collection">
+Explore Collection
+</a>
+
+</div>
+
+
+<div class="hero-img">
+
+<img
+src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1200&q=85"
+alt="Fashion collection">
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="new">
+
+<div class="section-title">
+
+<small>FEATURED COLLECTION</small>
+
+<h2>New Arrivals</h2>
+
+</div>
+
+
+<div class="products">
+
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=85"
+alt="Women's fashion">
+
+</div>
+
+<div class="product-info">
+
+<small>WOMEN</small>
+
+<h3>Classic Everyday Look</h3>
+
+<div class="price">₹1,499</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="https://images.unsplash.com/photo-1617127365659-c47fa864d8bc?auto=format&fit=crop&w=900&q=85"
+alt="Men's fashion">
+
+</div>
+
+<div class="product-info">
+
+<small>MEN</small>
+
+<h3>Modern Formal Style</h3>
+
+<div class="price">₹1,999</div>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-img">
+
+<img
+src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=900&q=85"
+alt="Kids fashion">
+
+</div>
+
+<div class="product-info">
+
+<small>KIDS</small>
+
+<h3>Smart Casual Collection</h3>
+
+<div class="price">₹999</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LOOKBOOK -->
+
+<section id="collection">
+
+<div class="lookbook">
+
+<div class="look-img">
+
+<img
+src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=85"
+alt="Fashion store">
+
+</div>
+
+
+<div class="look-text">
+
+<small>THE RANGOLI EDIT</small>
+
+<h2>
+Designed for your everyday.
+</h2>
+
+<p>
+From everyday essentials to special occasions,
+Rangoli Fashion brings together comfortable,
+modern and stylish pieces for every generation.
+</p>
+
+<a class="btn btn-pink" href="#new">
+Shop Collection
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OFFER -->
+
+<section id="offer">
+
+<div class="offer">
+
+<small>LIMITED TIME OFFER</small>
+
+<h2>
+Up to 30% OFF
+</h2>
+
+<p>
+Refresh your wardrobe with selected styles from our latest collection.
+</p>
+
+<a class="btn btn-pink" href="#new">
+View Offers
+</a>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Rangoli Fashion · Modern Clothing Store
+
+</footer>
+
+</div>
+
+</body>
+</html>
