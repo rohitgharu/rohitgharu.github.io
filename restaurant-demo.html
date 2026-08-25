@@ -1,1 +1,611 @@
-<!doctype html><html><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Urban Spoon Cafe</title><style>*{box-sizing:border-box}body{margin:0;font-family:Arial;background:#fffaf5;color:#202020}header{padding:22px 7%;display:flex;justify-content:space-between;background:#fff}.logo{font-size:24px;font-weight:800}.nav a{margin-left:20px;color:#333;text-decoration:none}.hero{padding:85px 7%;background:#f8d8b5;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}.hero h1{font-size:58px;line-height:1;margin:0 0 18px}.hero p{font-size:18px;line-height:1.7}.btn{display:inline-block;padding:14px 22px;background:#1f1f1f;color:#fff;text-decoration:none;border-radius:8px}.mock{height:320px;border-radius:24px;background:#3a241a;display:flex;align-items:center;justify-content:center;color:#fff;font-size:80px}section{padding:65px 7%}h2{text-align:center;font-size:36px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:#fff;padding:26px;border-radius:14px;box-shadow:0 8px 30px #0001}.price{font-weight:700}.contact{text-align:center;background:#201812;color:#fff}footer{text-align:center;padding:22px;background:#120d09;color:#ccc}@media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:42px}.cards{grid-template-columns:1fr}.nav{display:none}}</style></head><body><header><div class='logo'>URBAN SPOON</div><nav class='nav'><a href='#menu'>Menu</a><a href='#about'>About</a><a href='#contact'>Contact</a></nav></header><section class='hero'><div><h1>Good food. Good mood.</h1><p>A warm neighbourhood café serving fresh coffee, handcrafted meals and sweet treats every day.</p><a class='btn' href='#menu'>View Menu</a></div><div class='mock'>☕</div></section><section id='menu'><h2>Popular Menu</h2><div class='cards'><div class='card'><h3>Classic Cappuccino</h3><p>Rich espresso with silky steamed milk.</p><div class='price'>₹180</div></div><div class='card'><h3>Avocado Toast</h3><p>Toasted sourdough, avocado, herbs and chilli.</p><div class='price'>₹320</div></div><div class='card'><h3>Chocolate Cake</h3><p>Moist chocolate cake with house-made cream.</p><div class='price'>₹240</div></div></div></section><section id='about'><h2>About Us</h2><p style='max-width:760px;margin:auto;text-align:center;line-height:1.8'>Demo project for a café business. Replace this content with the client's real story, menu and photos.</p></section><section id='contact' class='contact'><h2>Visit Us</h2><p>12 Market Road, New Delhi · Mon–Sun 8:00 AM–10:00 PM</p><a class='btn' href='mailto:hello@example.com'>Contact Us</a></section><footer>© 2026 Urban Spoon Cafe · Demo Website</footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Urban Spoon Cafe | Fresh. Warm. Delicious.</title>
+
+<style>
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f7f3ed;
+color:#211b16;
+line-height:1.6;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.container{
+width:min(1120px,92%);
+margin:auto;
+}
+
+/* NAV */
+
+nav{
+height:82px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+border-bottom:1px solid #ded6cc;
+}
+
+.logo{
+font-size:23px;
+font-weight:900;
+letter-spacing:1px;
+}
+
+.logo span{
+color:#b56b3c;
+}
+
+.navlinks{
+display:flex;
+gap:26px;
+font-size:14px;
+font-weight:700;
+}
+
+.navlinks a:hover{
+color:#b56b3c;
+}
+
+/* HERO */
+
+.hero{
+min-height:650px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:55px;
+align-items:center;
+}
+
+.hero-text small{
+color:#b56b3c;
+font-weight:800;
+letter-spacing:2px;
+}
+
+.hero h1{
+font-family:Georgia,serif;
+font-size:65px;
+line-height:1.05;
+margin:15px 0 20px;
+letter-spacing:-2px;
+}
+
+.hero p{
+font-size:18px;
+color:#6d665f;
+max-width:510px;
+margin-bottom:28px;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:15px 25px;
+font-weight:800;
+border-radius:4px;
+}
+
+.btn-dark{
+background:#211b16;
+color:#fff;
+}
+
+.btn-orange{
+background:#b56b3c;
+color:#fff;
+}
+
+.hero-img{
+height:530px;
+overflow:hidden;
+border-radius:4px;
+}
+
+.hero-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* MENU */
+
+section{
+padding:90px 0;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.section-title small{
+color:#b56b3c;
+font-weight:800;
+letter-spacing:2px;
+}
+
+.section-title h2{
+font-family:Georgia,serif;
+font-size:43px;
+margin-top:8px;
+}
+
+.menu{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+}
+
+.menu-card{
+background:#fff;
+border:1px solid #e4ddd5;
+overflow:hidden;
+transition:.25s;
+}
+
+.menu-card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,.09);
+}
+
+.menu-img{
+height:270px;
+overflow:hidden;
+}
+
+.menu-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.3s;
+}
+
+.menu-card:hover img{
+transform:scale(1.05);
+}
+
+.menu-info{
+padding:22px;
+}
+
+.menu-info small{
+color:#b56b3c;
+font-weight:800;
+}
+
+.menu-info h3{
+font-family:Georgia,serif;
+font-size:22px;
+margin:5px 0;
+}
+
+.price{
+font-weight:900;
+font-size:18px;
+margin-top:8px;
+}
+
+/* EXPERIENCE */
+
+.experience{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+align-items:center;
+}
+
+.experience-img{
+height:500px;
+overflow:hidden;
+}
+
+.experience-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.experience-text{
+padding:30px;
+}
+
+.experience-text small{
+color:#b56b3c;
+font-weight:800;
+letter-spacing:2px;
+}
+
+.experience-text h2{
+font-family:Georgia,serif;
+font-size:45px;
+line-height:1.1;
+margin:15px 0;
+}
+
+.experience-text p{
+color:#6d665f;
+margin-bottom:25px;
+}
+
+/* SPECIAL */
+
+.special{
+background:#211b16;
+color:white;
+padding:70px 30px;
+text-align:center;
+}
+
+.special small{
+color:#d89b70;
+font-weight:800;
+letter-spacing:2px;
+}
+
+.special h2{
+font-family:Georgia,serif;
+font-size:46px;
+margin:10px 0;
+}
+
+.special p{
+color:#c9c1b8;
+margin-bottom:25px;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.contact h2{
+font-family:Georgia,serif;
+font-size:43px;
+margin-bottom:10px;
+}
+
+.contact p{
+color:#6d665f;
+margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+border-top:1px solid #ded6cc;
+padding:30px 0;
+text-align:center;
+font-size:14px;
+color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.navlinks{
+display:none;
+}
+
+.hero{
+grid-template-columns:1fr;
+padding:55px 0;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero-img{
+height:430px;
+}
+
+.menu{
+grid-template-columns:1fr;
+}
+
+.experience{
+grid-template-columns:1fr;
+}
+
+.experience-img{
+height:400px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+
+<div class="logo">
+<span>URBAN</span> SPOON
+</div>
+
+<div class="navlinks">
+<a href="#menu">Menu</a>
+<a href="#experience">Our Story</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-text">
+
+<small>WELCOME TO URBAN SPOON</small>
+
+<h1>
+Good food.
+Good coffee.
+Good moments.
+</h1>
+
+<p>
+A modern neighbourhood café serving freshly prepared food,
+great coffee and warm moments every day.
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-dark" href="#menu">
+Explore Menu
+</a>
+
+<a class="btn btn-orange" href="#contact">
+Visit Us
+</a>
+
+</div>
+
+</div>
+
+
+<div class="hero-img">
+
+<img
+src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=85"
+alt="Urban Spoon Cafe">
+
+</div>
+
+</section>
+
+
+<!-- MENU -->
+
+<section id="menu">
+
+<div class="section-title">
+
+<small>OUR FAVOURITES</small>
+
+<h2>Made Fresh Every Day</h2>
+
+</div>
+
+
+<div class="menu">
+
+
+<div class="menu-card">
+
+<div class="menu-img">
+
+<img
+src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
+alt="Fresh coffee">
+
+</div>
+
+<div class="menu-info">
+
+<small>COFFEE</small>
+
+<h3>Signature Cappuccino</h3>
+
+<p>Rich espresso with smooth steamed milk.</p>
+
+<div class="price">₹180</div>
+
+</div>
+
+</div>
+
+
+<div class="menu-card">
+
+<div class="menu-img">
+
+<img
+src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=85"
+alt="Fresh salad">
+
+</div>
+
+<div class="menu-info">
+
+<small>FOOD</small>
+
+<h3>Fresh Garden Bowl</h3>
+
+<p>Fresh vegetables, herbs and our house dressing.</p>
+
+<div class="price">₹260</div>
+
+</div>
+
+</div>
+
+
+<div class="menu-card">
+
+<div class="menu-img">
+
+<img
+src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85"
+alt="Dessert">
+
+</div>
+
+<div class="menu-info">
+
+<small>DESSERT</small>
+
+<h3>Classic Sweet Treat</h3>
+
+<p>A delicious finish to your café experience.</p>
+
+<div class="price">₹190</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<div class="experience">
+
+<div class="experience-img">
+
+<img
+src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85"
+alt="Cafe interior">
+
+</div>
+
+
+<div class="experience-text">
+
+<small>THE URBAN SPOON EXPERIENCE</small>
+
+<h2>
+Your favourite place to slow down.
+</h2>
+
+<p>
+Whether you're meeting friends, working for an afternoon
+or simply enjoying your morning coffee, Urban Spoon is
+designed to feel like your second home.
+</p>
+
+<a class="btn btn-orange" href="#contact">
+Come Say Hello
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SPECIAL OFFER -->
+
+<section>
+
+<div class="special">
+
+<small>THIS WEEKEND</small>
+
+<h2>
+Coffee + Dessert Combo
+</h2>
+
+<p>
+Enjoy your favourite coffee with a freshly prepared dessert.
+</p>
+
+<a class="btn btn-orange" href="#contact">
+Book Your Table
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="contact">
+
+<h2>
+Let's have coffee.
+</h2>
+
+<p>
+Urban Spoon Cafe · Open daily · 8:00 AM – 10:00 PM
+</p>
+
+<div class="buttons" style="justify-content:center">
+
+<a class="btn btn-dark" href="tel:+919999999999">
+Call Cafe
+</a>
+
+<a class="btn btn-orange"
+href="https://www.google.com/maps"
+target="_blank">
+Get Directions
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Urban Spoon Cafe · Fresh food · Great coffee · Good moments
+
+</footer>
+
+</div>
+
+</body>
+</html>
